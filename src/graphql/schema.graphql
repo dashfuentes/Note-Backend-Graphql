@@ -1,0 +1,29 @@
+type Query{
+ ping: String
+    getNotes:[Note]
+    getNotesById(_id:ID): Note
+    login(email: String, password: String): [User] 
+}
+
+type Mutation {
+    createNote(input:NoteInput) : Note
+    updateNote(input:NoteInput, _id:ID) :Note
+    removeNote(id:ID):[Note]
+}
+type Note {
+    _id:ID!
+    title:String!
+    content:String!
+    date:String!
+    author:String!
+}
+type User{
+    email: String
+    password: String
+}
+input NoteInput {
+    title:String!
+    content:String!
+    date:String!
+    author:String!
+}
