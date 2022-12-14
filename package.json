@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/index.js --exec babel-node",
-    "build": "babel src -d public  --source-maps && npm run production",
-    "production": "node public/index.js"
+    "build": "babel src -d dist  --source-maps ",
+    "production": "node dist/index.js"
   },
   "keywords": [],
   "author": "",
